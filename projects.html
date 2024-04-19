@@ -6,35 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body class="projects-body">
-    
-
+    <a href="index.html" class="back-link"><i class="fas fa-arrow-left fa-2x"></i></a>
     <h1>My Projects</h1>
     <div class="project">
-        <h2>Bioinformed</h2>
-        <p>Description of Project 1...</p>
-        <a href="#">Learn More</a>
+        <h2>Binformed (2024)</h2>
+        <p id="desc1">Educational mobile app using AI and ML to identify waste</p>
+        <a href="#" id="myBtn1">Learn More</a>
+    </div>
+
+    <div class="project">
+        <h2>How Are You Brewin' (2023)</h2>
+        <p id="desc2">Chrome extension to facilitate emotional self-expression, mood tracking, and daily journaling, fostering users' emotional well-being and self-awareness</p>
+        <a href="#" id="myBtn2">Learn More</a>
     </div>
     <div class="project">
-        <h2>Project 2</h2>
-        <p>Description of Project 2...</p>
-        <a href="#">Link to Project 2</a>
+        <h2>UVA RIG Website (2024)</h2>
+        <p id="desc2">Developed a website to showcase UVA’s Research Interest Group on AI Hardware/Software Co-Design</p>
+        <a href="#" id="myBtn3">Learn More</a>
     </div>
     <div class="project">
-        <h2>Project 3</h2>
-        <p>Description of Project 3...</p>
-        <a href="#">Link to Project 3</a>
+        <h2>Athena's Bump (2023)</h2>
+        <p id="desc2">Created mobile app focusing on prenatal nutrition, delievering expecting mothers recipes that meets their needs.</p>
+        <a href="#" id="myBtn4">Learn More</a>
     </div>
-    <div class="project">
-        <h2>Project 4</h2>
-        <p>Description of Project 4...</p>
-        <a href="#">Link to Project 4</a>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalText"></p>
+            <div id="imageContainer">
+                <img id="modalImage1" src="" alt="Project Image 1">
+                <img id="modalImage2" src="" alt="Project Image 2">
+            </div>
+            <a id="modalLink" href="">Link to GitHub</a>
+        </div>
     </div>
-    <div class="project">
-        <h2>Project 5</h2>
-        <p>Description of Project 5...</p>
-        <a href="#">Link to Project 5</a>
-    </div>
+    
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var btn1 = document.getElementById("myBtn1");
+        var btn2 = document.getElementById("myBtn2");
+        var btn3 = document.getElementById("myBtn3");
+        var btn4 = document.getElementById("myBtn4");
+        var span = document.getElementsByClassName("close")[0];
+    
+        btn1.onclick = function() {
+            document.getElementById("modalTitle").innerText = "Binformed (2024)";
+            document.getElementById("modalText").innerHTML = "<ul>\
+                <li>Ongoing project developed in Dart using Flutter framework</li>\
+                <li>Utilizes smartphone cameras for waste management</li>\
+                <li>ML-powered system distinguishes between recyclables and waste</li>\
+                <li>AI offers personalized guidance on eco-friendly disposal methods</li>\
+                <li>Gamified approach encourages daily recycling habits through streaks</li>\
+            </ul>";
+            document.getElementById("modalLink").href = "https://github.com/oliviaseto/binformed"; 
+            document.getElementById("modalImage1").src = "img/binformed.png"; 
+            document.getElementById("modalImage2").style.display = "none";
+            
+            modal.style.display = "block";
+        }
+    
+        btn2.onclick = function() {
+            document.getElementById("modalTitle").innerText = "How Are You Brewin' (2023)";
+            document.getElementById("modalText").innerHTML = "<ul>\
+                <li>Html, CSS, Javascript, Jquery</li>\
+                <li>Developed a Chrome extension to facilitate emotional self-expression, mood tracking, and daily journaling, fostering users' emotional well-being and self-awareness </li>\
+                <li>Won Best Overall at UVA's Girls Hoo Hack 2023 for exhibiting creativity, innovation, and diversity of thought </li>\
+            </ul>";
+            document.getElementById("modalLink").href = "https://github.com/oliviaseto/howareyoubrewin"; 
+            document.getElementById("modalImage1").src = "img/brewin1.png"; 
+            document.getElementById("modalImage2").src = "img/brewin2.png";
+            
+            modal.style.display = "block";
+        }
+        btn3.onclick = function() {
+            document.getElementById("modalTitle").innerText = "UVA RIG Website (2024)";
+            document.getElementById("modalText").innerHTML = "<ul>\
+                <li>Html, CSS, Javascript</li>\
+                <li>Developed a website to showcase UVA’s Research Interest Group on AI Hardware/Software Co-Design</li>\
+            </ul>";
+            document.getElementById("modalLink").href = "https://github.com/athenasbumpgit/AthenasBump_MA"; 
+            document.getElementById("modalImage1").src = "img/rig.png"; 
+            document.getElementById("modalImage2").style.display = "none";
+            
+            modal.style.display = "block";
+        }
+        btn4.onclick = function() {
+            document.getElementById("modalTitle").innerText = "Athena's Bump (2023)";
+            document.getElementById("modalText").innerHTML = "<ul>\
+                <li>Flutter app written in Dart</li>\
+                <li>Created mobile app focusing on prenatal nutrition, delievering expecting mothers recipes that meets their needs.</li>\
+                <li>Implemented user registration system so each user has a recipe tailored to their needs depending on the results of the survey.</li>\
+            </ul>";
+            document.getElementById("modalLink").href = "https://github.com/athenasbumpgit/AthenasBump_MA"; 
+            document.getElementById("modalImage1").src = "img/figma.png"; 
+            document.getElementById("modalImage2").style.display = "none";
+            
+            modal.style.display = "block";
+            
+        }
+    
+    
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
+    
+    
 </body>
 </html>

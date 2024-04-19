@@ -19,6 +19,7 @@ body.index-body {
 
 .intro p {
     font-size: 25px;
+    text-align: left;
 }
 
 .intro h1 {
@@ -79,6 +80,61 @@ body.index-body {
     50% {border-color: #577598}
   }
 
+body.about-body {
+    color: #577598;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #FAF9F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10 350px;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+p {
+    color: #999;
+    line-height: 1.6;
+    font-size: 20px;
+    text-align: center;
+}
+
+a {
+    color: #0099ff;
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 20px;
+    text-align: left;
+}
+
+ul li {
+    line-height: 1.4;
+}
+
+
 body.projects-body {
     font-family: 'Courier New', Courier, monospace;
     background-color: #FAF9F6;
@@ -127,3 +183,51 @@ h1 {
     background-color: #3a506b;
 }
 
+.modal {
+    display: none; 
+    justify-content: center;
+    align-items: left;
+    padding: 20px; /* Adjust this value to increase or decrease the space around the modal */
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background: transparent; 
+}
+
+.modal-content {
+    background-color: #FAF9F6;
+    padding: 10px;
+    border: 2px solid #577598;
+    width: 35%;
+}
+
+/* The Close Button */
+.close {
+    color: #3a506b;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-content img {
+    width: 50%;  /* This will make the image take the full width of its parent */
+    height: 50%; /* This will scale the height in proportion to the width */
+}
+.back-link {
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #577598; /* Change color as needed */
+}

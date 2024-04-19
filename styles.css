@@ -1,0 +1,71 @@
+body {
+    color: #577598;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #FAF9F6;
+    padding: 0 150px;
+}
+.container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.intro p {
+    font-size: 25px;
+}
+
+.intro h1 {
+    font-size: 64px;
+}
+
+.description {
+    font-size: 20px;
+    animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button {
+    background-color: #577598;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  .intro h1 {
+      font-size: 64px;
+      overflow: hidden;
+      border-right: .1em solid #577598; 
+      white-space: nowrap; 
+      margin: 0 auto; 
+      letter-spacing: .05em; 
+      animation: 
+        typewriter 1s steps(10, end) forwards,
+        blink-caret .5s step-end infinite;
+  }
+  
+
